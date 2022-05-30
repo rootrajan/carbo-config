@@ -1,0 +1,16 @@
+spring.data.mongodb.host: mongodb
+spring.data.mongodb.port: 27017
+spring.data.mongodb.database: FracProOps
+spring.data.mongodb.username: carbo
+spring.data.mongodb.password: carbor0x!
+
+config:
+  oauth2:
+    tokenTimeout: 36000
+    resource:
+      id: oauth2-resource
+    clientID: carbo-password
+    clientSecret: secret
+    grantType: client_credentials
+    #Server
+    accessTokenUri: https://52.165.144.51/api/auth/auth/oauth/token

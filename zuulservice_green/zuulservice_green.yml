@@ -1,0 +1,72 @@
+zuul.ribbon.eager-load.enabled: true
+zuul.ignored-services: "*"
+zuul.prefix: /api
+zuul.routes.fleetservice: /fleet/**
+zuul.routes.operatorservice: /operator/**
+zuul.routes.locationservice: /location/**
+zuul.routes.padservice: /pad/**
+zuul.routes.wellservice: /well/**
+zuul.routes.vendorservice: /vendor/**
+zuul.routes.emailservice: /email/**
+zuul.routes.wsservice: /ws/**
+zuul.routes.jobservice: /job/**
+zuul.routes.chemicaldeliveryservice: /chemicaldelivery/**
+zuul.routes.chemicalstageservice: /chemicalstage/**
+zuul.routes.proppantdeliveryservice: /proppantdelivery/**
+zuul.routes.proppantstageservice: /proppantstage/**
+zuul.routes.pumpissueservice: /pumpissue/**
+zuul.routes.pumpscheduleservice: /pumpschedule/**
+zuul.routes.wellinfoservice: /wellinfo/**
+zuul.routes.checklistservice: /checklist/**
+zuul.routes.activitylogservice: /activitylog/**
+zuul.routes.fieldticketservice: /fieldticket/**
+zuul.routes.authenticationservice: /auth/**
+zuul.routes.adminservice: /admin/**
+zuul.routes.organizationservice: /organization/**
+zuul.routes.districtservice: /district/**
+zuul.routes.onsiteequipmentservice: /onsiteequipment/**
+zuul.routes.changelogservice: /changelog/**
+zuul.routes.miscdataservice: /miscdata/**
+zuul.routes.workoverservice: /workover/**
+zuul.routes.consumableservice: /consumable/**
+zuul.routes.maintenanceservice: /maintenance/**
+zuul.routes.operationsoverviewservice: /operationsoverview/**
+zuul.routes.servicecompanyservice: /servicecompany/**
+zuul.routes.serviceaccountservice: /serviceaccount/**
+zuul.routes.costservice: /cost/**
+zuul.routes.casingservice: /casing/**
+zuul.routes.swaggerdocumentation: /swagger/**
+zuul.routes.ironfailureservice: /ironfailure/**
+zuul.routes.wateranalysisservice: /wateranalysis/**
+
+zuul.routes.fracpro.path: /fracpro/**
+zuul.routes.fracpro.url: https://api.fracpro.ai:4000
+zuul.routes.fracpro.serviceId: fracpro
+
+zuul.routes.simplified-job.path: /job/v1/jobs/simplified
+zuul.routes.simplified-job.url: /ws/v1/jobs/simplified
+zuul.routes.simplified-job.serviceId: simplified-job
+
+#zuul.routes.licensestatic.path: /licensestatic/**
+#zuul.routes.licensestatic.url:  http://licenseservice-static:9081
+#zuul.routes.licensestatic.serviceId: licensestatic
+#zuul.routes.licensestatic.ribbon.listOfServers: http://licenseservice-static1:9081, http://licenseservice-static2:9082
+#ribbon.eureka.enabled: false
+zuul.sensitiveHeaders: Cookie, Set-Cookie
+zuul.debug.request: true
+ribbon.ReadTimeout: 120000
+ribbon.ConnectTimeout: 10000
+ribbon.MaxAutoRetries: 0
+ribbon.MaxAutoRetriesNextServer: 1
+ribbon.MaxTotalHttpConnections: 2000
+ribbon.MaxConnectionsPerHost: 1000
+ribbon.eureka.enabled: true
+# Increase the Hystrix timeout to 60s (globally)
+hystrix.command.default.execution.isolation.thread.timeoutInMilliseconds: 260000
+
+hystrix.command.emailservice.execution.isolation.thread.timeoutInMilliseconds: 260000
+emailservice.ribbon.ReadTimeout: 260000
+
+spring.zipkin.baseUrl: 'http://zipkin:9411'
+signing.key: "345345fsdfsf5345"
+allowed.referrers: http://localhost:8080,http://52.165.144.51

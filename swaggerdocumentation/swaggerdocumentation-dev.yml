@@ -1,0 +1,17 @@
+config:
+  oauth2:
+    tokenTimeout: 36000
+    resource:
+      id: oauth2-resource
+    clientID: carbo-password
+    clientSecret: secret
+    grantType: client_credentials
+    #Server
+    accessTokenUri: http://52.165.144.51/api/auth/auth/oauth/token
+
+zuul:
+  url: http://52.165.144.51/api/
+
+swagger:
+  config:
+    refreshRateMillis: 300000

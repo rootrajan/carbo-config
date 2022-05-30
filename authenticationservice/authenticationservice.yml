@@ -1,0 +1,6 @@
+spring.data.mongodb.host: mongodb
+spring.data.mongodb.port: 27017
+spring.data.mongodb.database: FracProOps
+spring.data.mongodb.username: carbo
+spring.data.mongodb.password: carbor0x!
+signing.key: "345345fsdfsf5345"
