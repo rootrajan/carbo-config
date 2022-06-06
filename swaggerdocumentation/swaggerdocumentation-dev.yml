@@ -7,10 +7,11 @@ config:
     clientSecret: secret
     grantType: client_credentials
     #Server
-    accessTokenUri: http://52.165.144.51/api/auth/auth/oauth/token
+    #accessTokenUri: http://52.165.144.51/api/auth/auth/oauth/token
+    accessTokenUri: http://20.219.114.127/api/auth/auth/oauth/token
 
 zuul:
-  url: http://52.165.144.51/api/
+  url: http://20.219.114.127/api/
 
 swagger:
   config:
