@@ -71,7 +71,7 @@ emailservice.ribbon.ReadTimeout: 260000
 
 spring.zipkin.baseUrl: 'http://zipkin:9411'
 signing.key: "345345fsdfsf5345"
-allowed.referrers: http://localhost:8080,http://52.165.144.51
+#allowed.referrers: http://localhost:8080,http://52.165.144.51
 
 logging:
   level:
